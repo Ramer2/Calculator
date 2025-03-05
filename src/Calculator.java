@@ -32,4 +32,8 @@ public class Calculator {
         }
         return a;
     }
+
+    public static int lcm(int a, int b) {
+        return (a / gcd(a, b)) * b;
+    }
 }
