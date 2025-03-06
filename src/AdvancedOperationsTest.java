@@ -38,7 +38,7 @@ public class AdvancedOperationsTest {
     public void testGCD1() {
         // arrange
         int a = 24;
-        int b = 26;
+        int b = 36;
 
         // act
         int result = Calculator.gcd(a, b);
