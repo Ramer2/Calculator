@@ -20,7 +20,7 @@ public class BasicOperationsTest {
     }
 
     @Test
-    public void testAddWithRandomNumbers() {
+    public void testAdd2() {
         // arrange
         int a = random.nextInt(1_000_000);
         int b = random.nextInt(1_000_000);
@@ -110,5 +110,15 @@ public class BasicOperationsTest {
 
         // assert
         Assertions.assertEquals(a / b, result, "Division of two numbers failed (test 1).");
+    }
+
+    @Test
+    void testDivideByZero() {
+        // arrange
+        int a = 90;
+        int b = 0;
+
+        // act && assert
+        Assertions.assertThrows(ArithmeticException.class, () -> Calculator.divide(a, b));
     }
 }
