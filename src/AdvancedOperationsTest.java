@@ -32,6 +32,16 @@ public class AdvancedOperationsTest {
         Assertions.assertEquals(Math.pow(a, b), result, "Power operation failed (test 1).");
     }
 
+    @Test
+    public void testPowerOfZero() {
+        // arrange
+        int a = 0;
+        int b = 0;
+
+        // act && assert
+        Assertions.assertThrows(ArithmeticException.class, () -> Calculator.pow(a, b));
+    }
+
 
     // subtraction
     @Test

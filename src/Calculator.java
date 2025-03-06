@@ -16,6 +16,10 @@ public class Calculator {
         return a / b;
     }
     public static long pow(long a, long b) {
+        if (a == 0 && b == 0) {
+            throw new ArithmeticException("Can't 0^0.");
+        }
+
         long result = 1;
         while (b > 0) {
             result *= a;
